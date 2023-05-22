@@ -1,7 +1,6 @@
 import "./HeroImage.css";
 import React from "react";
 import programmer from "../Assets/programmer.jpg";
-import { Link } from "react-router-dom";
 
 const HeroImage = () => {
   return (
