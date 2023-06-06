@@ -1,36 +1,106 @@
-.skill-header {
-  margin-bottom: 2rem;
-}
-
-.skills-section {
-  height: 100vh;
-  width: 100%;
-  /* width: 100%; */
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 90vh;
-  position: relative;
+.skills-section{
+  background-color:#e6dbdb86; 
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+    height: 100vh;
 }
-
-.skills-section::before {
-  content: "";
-  background: url(https://e0.pxfuel.com/wallpapers/149/259/desktop-wallpaper-web-development-thumbnail.jpg);
-  background-size: cover;
-  background-position: center top;
-  height: 90vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.skill-header {
+  color:  #2c0141;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
 }
-
 .skills-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
   width: 90vw;
+}
+.skills{
+  color: #ffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0.5rem;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #ffff;
+  z-index: -1;
+}
+.skills:hover{
+  scale: 1.1; 
+}
+.skill-content{
+  position: absolute;   
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  color: #ffff;
+  font-weight: 1000;
+  font-size: 14px;
+}
+.container {
+  position: relative;
+  height: 100%;
+  transition-duration: 0.3s;
+}
+
+.backdrop-bg {
+  position: absolute;   
+  border-radius: 0.5rem;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.443);
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+.container:hover .backdrop-bg {
+  opacity: 1;
+}
+
+.container:hover{
+  scale: 1.1;
+}
+
+@media only screen and (min-width:320px) {
+  .container{
+    height: 100px;
+    width: 100px;
+  }
+  .skills{  
+    height: 100px;
+    width: 100px;  
+  }
+  .backdrop-bg{
+    height: 100px;
+    width: 100px;
+  }
+}
+@media only screen and (min-width:930px){
+  .container{
+    height: 100px;
+    width: 100px;
+  }
+  .skills{  
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+  }
+  .backdrop-bg{
+    height: 100px;
+    width: 100px;
+  }
+  .skills-wrapper{
+    display: flex;
+   justify-content: center;
+   gap:3.5rem;
+  
+  }
 }

@@ -1,18 +1,19 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
 import HeroImage from "../Components/HeroImage";
 import Footer from "../Components/Footer";
 import About from "../Components/About";
 import Skills from "../Components/Skills";
+import "./Home.css"
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <HeroImage />
-      <About />
+      <section className="intro-section-wrapper" >
+        <HeroImage />
       <Skills />
+      <About />
       <Footer />
+      </section>
     </div>
   );
 };
